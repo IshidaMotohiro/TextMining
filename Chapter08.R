@@ -20,7 +20,7 @@ x <- Aozora("http://www.aozora.gr.jp/cards/000081/files/43754_ruby_17594.zip")
 library(RMeCab)
 setwd("/home/ishida/Dropbox/R/Morikita/Version2/")
 
-miyaz <- docDF("data/NORUBY/chumonno_oi_ryoriten2.txt", type = 1)
+## miyaz <- docDF("data/NORUBY/chumonno_oi_ryoriten2.txt", type = 1)
 miyaz <- docDF(x, type = 1)
 library(dplyr)
 miyaz %>% head()
@@ -30,7 +30,9 @@ miyaz2 <- miyaz %>% select(everything(), FREQ = chumonno_oi_ryoriten2.txt) %>%
                     filter(POS1 %in% c("名詞","形容詞"), 
                            POS2 %in% c("一般", "固有名詞", "自立"))
 
-## Wordcloud を作成する準備
+miyaz2 %>% arrange(FREQ) %>% tail(50)
+
+## ワードクラウドを作成する準備
 install.packages("wordcloud")
 library(wordcloud)
 ## プロット作成

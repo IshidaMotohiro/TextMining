@@ -44,12 +44,18 @@ install.packages("purrr")
 library(purrr)
 x %>% map_chr(extract(9))
 
-### 5.4 頻度表の作成と利用
 tmp <- data.frame(BUN = "本を買った", stringAsFactor = FALSE)
 x <- docDF(tmp, "BUN", type = 1)
-
 x
 
+### 5.4 頻度表の作成と利用
+
+library(RMeCab)
+library(dplyr)
+
+merosu <- RMeCabFreq("data/merosu.txt")
+
+merosu %>% head()
 
 ### 5.4.1 品詞を限定して抽出する
 merosu <- docDF("data/merosu.txt", 
@@ -68,6 +74,7 @@ merosu %>% filter(TERM == "メロス")
 merosu2 <- merosu %>% select(TERM, POS1, FREQ) %>% 
              group_by(TERM, POS1) %>%
                summarize(FREQ = sum(FREQ)) 
+
 merosu2 %>% NROW()
 
 merosu2 %>% head()
@@ -129,13 +136,18 @@ res <- docMatrixDF(photo[ ,"Reply"])
 
 res
 
-res <- docDF(photo, column = "Reply", type = 1, pos = c("名詞","形容詞"), N = 2)
-res
 
 ### 5.6 Nグラムのデータフレームを生成
 library(RMeCab)
 S <- data.frame(BUN = "メロスは激怒した", stringsAsFactors = FALSE)
+
+
+res <- docDF(photo, column = "Reply", type = 1, pos = c("名詞","形容詞"), N = 2)
+res
+
+
 (docDF(S, column = 1, type = 1, N = 2))
+
 
 ### 5.6.1 文字のNグラムの
 merosu <- Ngram("data/merosu.txt", type = 0, N = 2)

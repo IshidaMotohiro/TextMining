@@ -11,32 +11,29 @@ setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
 
 
 ### 6.2 ウェブスクレイピングの準備
-install.packages("rvest")
+# install.packages("rvest")
 
-library(rvest)
-
-jobs <- read_html("https://bookmeter.com/books/5550353")
+# library(rvest)
 
 ### 2017年4月にサイト構造が大きく変ったため、以下のコードではテキストを抽出できません
 ### サイトからテキストを抽出し、テキストマイニングのデータとする手順として参考にしてください
 ### 抽出し、形態素解析を実行した結果のファイルを revicsv, bigram.csv として用意しています
 
-jobs <- read_html("http://bookmeter.com/b/4062180731")
+# jobs <- read_html("http://bookmeter.com/b/4062180731")
 
 library(dplyr)
-reviews <- jobs %>% html_nodes("div[id^='review_text_']") %>% html_text()
+# reviews <- jobs %>% html_nodes("div[id^='review_text_']") %>% html_text()
 
 library(magrittr)
-reviews %>% extract(1)
+# reviews %>% extract(1)
 
 library(RMeCab)
-reviews %>% extract2(1) %>% RMeCabC() %>% unlist()
+# reviews %>% extract2(1) %>% RMeCabC() %>% unlist()
 
 ## writeLines(reviews, "data/reviews.txt")
 
-library(RMeCab)
-revi <- docDF("data/reviews.txt", type = 1, pos = c("名詞","形容詞", "動詞"))
-revi %>% NROW()
+# revi <- docDF("data/reviews.txt", type = 1, pos = c("名詞","形容詞", "動詞"))
+# revi %>% NROW()
 
 
 revi <- read.csv("data/revi.csv", stringsAsFactors = FALSE)
@@ -57,10 +54,10 @@ revi2 %>% NROW()
 revi2 %>% arrange(reviews.txt) %>% tail(30)
 
 # 
-bigram <- docDF("data/reviews.txt", type = 1, nDF = 1, N = 2, 
-                 pos = c("名詞","形容詞","動詞"))
-
-write.csv(bigram, file = "data/bigram.csv", row.names = FALSE, quote = FALSE, fileEncoding = "UTF-8")
+#bigram <- docDF("data/reviews.txt", type = 1, nDF = 1, N = 2, 
+#                 pos = c("名詞","形容詞","動詞"))
+#
+#write.csv(bigram, file = "data/bigram.csv", row.names = FALSE, quote = FALSE, fileEncoding = "UTF-8")
 
 bigram  <- read.csv("data/bigram.csv", stringsAsFactors = FALSE)
 

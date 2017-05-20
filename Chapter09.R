@@ -11,8 +11,6 @@ setwd("/Users/ishida/Download/TextMining")# など
 setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
 
 
-library(ggplot2)
-
 ### l9.1 解析の準備
 library(RMeCab)
 prime <- docMatrix2("data/prime/utf8", pos = c("名詞","形容詞","動詞"), 
@@ -32,7 +30,8 @@ colnames(prime)  %<>% str_replace("(\\d{4})\\d{4}_(\\d{3})", "\\1_\\2")
 ### 9.3 所信表明演説のクラスター分析
 hc <- prime %>% t %>% dist %>% hclust("ward.D2")
 
-# install.packages("ggdendro")
+# 
+install.packages("ggdendro")
 
 library(ggdendro)
 ggdendrogram(hc, rotate= TRUE)
@@ -40,7 +39,7 @@ ggdendrogram(hc, rotate= TRUE)
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-CairoPDF(file = "hc.pdf")
+cairo_pdf(file = "hc.pdf", family = "JP1")
 ggdendrogram(hc, rotate= TRUE)
 dev.off()
 
@@ -191,6 +190,8 @@ ministersDF <- as.data.frame(ministers) %>%
                    mutate(num = paste0("No", c(64, 74, 77, 80)))
 ministersDF
 
+# install.packages("tidyr")
+
 library(tidyr)
 
 ministersDF <- ministersDF %>% 
@@ -198,12 +199,12 @@ ministersDF <- ministersDF %>%
 
 library(ggplot2)
 
-x <- ministersDF %>% ggplot(aes(x = topic, y = props, fill = num)) +       geom_bar(stat = "identity") + facet_wrap(~num)
+ministersDF %>% ggplot(aes(x = topic, y = props, fill = num)) +       geom_bar(stat = "identity") + facet_wrap(~num)
 
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-cairo_pdf(file = "ministersDF.pdf")
+cairo_pdf(file = "ministersDF.pdf", family = "JP1")
 x
 dev.off()
 

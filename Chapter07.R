@@ -9,7 +9,8 @@ setwd("C:/Users/ishida/TextMining")# など
 setwd("/Users/ishida/Download/TextMining")# など
 ### Linux
 setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
-
+  setwd("/myData/Books/morikita/")
+  
 ### 7.1 沖縄観光への意見データ
 okinawa <- read.csv("data/H18koe.csv")
 ## 行数を確認
@@ -117,7 +118,7 @@ fviz_ca_biplot(FM4ca)
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-cairo_pdf("FM4ca.pdf")
+cairo_pdf("FM4ca.pdf", family = "JP1")
 fviz_ca_biplot(FM4ca)
 dev.off()
 
@@ -125,6 +126,9 @@ dev.off()
 ### 独立性の検定(カイ自乗検定)
 # Excel ファイルの読み込み
 library(readxl)
+
+setwd("C:/Users/ishida/Documents/TextMining")
+
 dat <- read_excel("data/sentences.xlsx")
 
 ## クロス表を生成
@@ -151,7 +155,7 @@ fviz_ca_biplot(datCA)
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-cairo_pdf(file = "datCA.pdf")
+cairo_pdf(file = "datCA.pdf", family = "JP1")
 fviz_ca_biplot(datCA)
 dev.off()
 

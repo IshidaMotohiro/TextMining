@@ -80,7 +80,8 @@ mext %>% arrange(FREQ) %>% tail(40)
 
 
 library (wordcloud)
-# wordcloud (m2[,1], m2[,4], min.freq = 7, colors = rainbow(5))
+#  pal <- brewer.pal(8,"Dark2")
+# wordcloud (m2[,1], m2[,4], min.freq = 7, colors = pal)
 wordcloud (mext$TERM, mext$FREQ, min.freq = 6, family = "JP1")
 
 
@@ -92,7 +93,7 @@ trends <- getTrends(1118370)
 trends$name
 
 
-center <- searchTwitter(searchString = "センター試験", n = 2000, since = "2017-01-13")
+center <- searchTwitter(searchString = "センター試験", n = 1000, since = "2017-01-13")
 
 cntDF <- twListToDF(center)
 cntDF %>% head()

@@ -95,7 +95,7 @@ alice  %>% inspect
 
 alice[[1]] %>% as.character()
 
-### 4。4。1 空白文字などの削除
+### 4.4.1 空白文字などの削除
 alice1 <- alice %>% tm_map(stripWhitespace)
 
 alice1[[1]] %>% as.character()
@@ -117,6 +117,7 @@ alice1[[1]] %>% as.character()
 
 ### 4.4.4 ステミング
 install.packages("SnowballC")
+
 library(SnowballC)
 
 alice1 %<>% tm_map(stemDocument)

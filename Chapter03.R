@@ -40,14 +40,17 @@ sum(1:10)
 ?sum
 
 ### 3.6 データフレーム
-df1 <- data.frame(クラス = c("B","A","A","B","C","A"), 
-                   名前 = c("逢坂","青木","赤城","荻窪","金元","神谷"),  
-                   国語 = c(77,74,86,90,76,56), 
-                   英語 = c(67, 76, 74, 86, 75, 69),
-                   数学 = c(61, 74, 82, 89, 61, 61))
+df1 <- data.frame(クラス = c("B", "A", "A", "B", "C", "A"), 
+                   名前 = c("逢坂", "荻窪", "茅原", "金元", "原田", "佐倉"),  
+                   英語 = c(77, 90, 79,  76, 67, 72), 
+                   現文 = c(67, 86, 81, 75, 66, 84),
+                   数学 = c(61, 89, 75, 61, 57, 79))
 
 ### 3.7 CSV ファイルの読み込み
-dat <- read.csv("data/classes.csv", fileEncoding= "CP932")
+dat <- read.csv("data/classes.csv")
+##  一般に Mac ないし Linux でWindowsで作成された csv ファイルを読み込むには以下を実行する(ただし本書サポートサイトの classes.csv は UTF-8 に変換されているので不要)
+## dat <- read.csv("data/classes.csv", fileEncoding= "CP932")
+                
 head(dat)
 
 
@@ -213,9 +216,6 @@ install.packages("ggplot2")
 
 library (ggplot2)
 library(dplyr)
-
-p1 <- iris %>% ggplot (aes (x = Sepal.Length, y = Sepal.Width, color = Species))
-p1 + geom_point()
 
 p1 <- iris %>% ggplot (aes (x = Sepal.Length, y = Sepal.Width, color = Species))
 p1 + geom_point()

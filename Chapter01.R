@@ -1,17 +1,9 @@
 # 『改訂版Rによるテキストマイニング入門』
 ## 第1章 テキストマイニングとは何か
 
-### ダウンロードしたスクリプトおよびデータが保存されたフォルダをワークスペースとして設定
-### Windows
-setwd("C:/Users/ishida/TextMining")# など
-### Mac
-setwd("/Users/ishida/Download/TextMining")# など
-### Linux
-setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
-
 ### 1.2.1 対応分析
 
-## 以下のコードは第3章R/RStudio速習を読了後に実行されることを勧める
+## 以下のコードは第3章R/RStudio速習を読了後に実行されたい
 dat <- matrix(c(4,2,2,3,1, 2,8,9,3,7, 6,1,2,6,2, 2,4,4,3,2), nrow = 5)
 colnames(dat) <- c("主婦Yes", "主婦No", "独身Yes", "独身No")
 rownames(dat) <- c("機能",  "スペース", "場所", "便利", "割高")

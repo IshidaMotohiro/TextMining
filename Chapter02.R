@@ -42,8 +42,8 @@ mecab /Users/ishida/test.txt > /Users/ishida/res.txt
 install.packages("RMeCab", repos = "http://rmecab.jp/R")
 
 # Mac あるいは Linux であれば、以下のようにしてGitHubからソースを取得してインストールすることも可能
-install.packages("devtools")
-devtools::install_github("IshidaMotohiro/RMeCab")
+# install.packages("devtools")
+# devtools::install_github("IshidaMotohiro/RMeCab")
 
 
 ### 2.7 MeCab の辞書整備
@@ -54,9 +54,9 @@ C:\Program Files\MeCab\bin>mecab-dict-index.exe -d "c:\Program Files\MeCab\dic\i
 
 ### Mac/Linux ではターミナルを起動して実行
 ### ソースコードからインストールした場合
-/usr/local/libexec/mecab/mecab-dict-index -d/usr/local/lib/mecab/dic/ipadic -u motohiro.dic -f utf-8 -t utf-8 motohiro.csv 
+/usr/local/libexec/mecab/mecab-dict-index -d /usr/local/lib/mecab/dic/ipadic -u motohiro.dic -f utf-8 -t utf-8 motohiro.csv 
 ### Homebrew を使ってインストールした場合
-/usr/local/Cellar/mecab/0.996/libexec/mecab/mecab-dict-index  -d/usr/local/Cellar/mecab/0.996/lib/mecab/dic/ipadic -u motohiro.dic -f utf-8 -t utf-8 motohiro.csv 
+/usr/local/Cellar/mecab/0.996/libexec/mecab/mecab-dict-index  -d /usr/local/Cellar/mecab/0.996/lib/mecab/dic/ipadic -u motohiro.dic -f utf-8 -t utf-8 motohiro.csv 
 
 # 以下で dic=引数の指定は読者の環境にあわせて変更してください
 library(RMeCab)
