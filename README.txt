@@ -44,24 +44,25 @@ data/RMeCab.R
   
 - 宮沢賢治『注文の多い料理店』(ルビ等削除済み)
 
-data/NORUBY/chumonno_oi_ryoriten2.txt  
+data/NORUBY/chumonno_oi_ryoriten2.txt
 
 - Alice in Wonderland の一部分を三分割したファイル
 
-  data/alice/alice1.txt                 
+  data/alice/alice1.txt
   data/alice/alice2.txt
   data/alice/alice3.txt
 
 - 単語文書行列作成用サンプル
 
-data/doc/doc1.txt                   
+  data/doc/doc1.txt
   data/doc/doc2.txt
   data/doc/doc3.txt
 
 - 沖縄観光アンケート性別年齢別仕分け済みファイル
 
-H18koe.csv からテキスト部分を取り出しがファイル(本書に取り出し方法の説明あり)
-  data/okinawa/F20.txt                
+  H18koe.csv からテキスト部分を取り出しがファイル(本書に取り出し方法の説明あり)
+
+  data/okinawa/F20.txt 
   data/okinawa/F30.txt
   data/okinawa/F40.txt
   data/okinawa/F50.txt
@@ -74,9 +75,9 @@ H18koe.csv からテキスト部分を取り出しがファイル(本書に取�
   data/okinawa/M60.txt
   data/okinawa/M70.txt
 
-- 文体識別用サンプルファイル(いずれも全文ではなく抜粋)    
+- 文体識別用サンプルファイル(いずれも全文ではなく抜粋) 
 
-data/writers/ogai_gan.txt               森鴎外『雁』
+  data/writers/ogai_gan.txt               森鴎外『雁』
   data/writers/ogai_niwatori.txt          森鴎外『鶏』
   data/writers/ogai_kanoyoni.txt          森鴎外『かのように』
   data/writers/ogai_vita.txt              森鴎外『ヰタ・セクスアリス』
@@ -87,17 +88,15 @@ data/writers/ogai_gan.txt               森鴎外『雁』
 
 - 辞書サンプルデータ
 
-data/motohiro.csv
+  data/motohiro.csv
   data/mecab.bat 
 
 - 説明ファイル
 
-README.md
+  README.md
   README.txt(README.mdと中身は同じ)
   
 - Windows用Shift_Jis(CP932)変換スクリプトおよびデータ
 
-Windows.zip
-  
-  
-  
+  Windows.zip
+

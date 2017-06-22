@@ -1,10 +1,18 @@
-# 『改訂版Rによるテキストマイニング入門』 スクリプトおよびデータ
+# 『Rによるテキストマイニング入門(第2版)』 スクリプトおよびデータ
+
+##
+- [出版社サイト](http://www.morikita.co.jp/books/book/3169)
+- [Amazon](https://www.amazon.co.jp/dp/4627848420/
+
+## 正誤表(予定)
+
 
 ## ファイルの説明
 
 
 - 各章に対応したスクリプトファイル
- Chapter01.R
+
+Chapter01.R
  Chapter02.R
  Chapter03.R
  Chapter04.R
@@ -17,9 +25,11 @@
  Chapter11.R
 
 - RMeCab の関数紹介スクリプト
- data/RMeCab.R
+
+data/RMeCab.R
 
 - データ
+
   data/H18koe.csv      沖縄観光アンケート
   data/bigram.csv      口コミサイトから生成したバイグラム
   data/hon.txt         短文
@@ -33,20 +43,26 @@
   data/classes.xlsx    クラス成績データ
   
 - 宮沢賢治『注文の多い料理店』(ルビ等削除済み)
-  data/NORUBY/chumonno_oi_ryoriten2.txt  
+
+data/NORUBY/chumonno_oi_ryoriten2.txt
 
 - Alice in Wonderland の一部分を三分割したファイル
-  data/alice/alice1.txt                 
+
+  data/alice/alice1.txt
   data/alice/alice2.txt
   data/alice/alice3.txt
 
 - 単語文書行列作成用サンプル
-  data/doc/doc1.txt                   
+
+  data/doc/doc1.txt
   data/doc/doc2.txt
   data/doc/doc3.txt
 
 - 沖縄観光アンケート性別年齢別仕分け済みファイル
-  data/okinawa/F20.txt                
+
+  H18koe.csv からテキスト部分を取り出しがファイル(本書に取り出し方法の説明あり)
+
+  data/okinawa/F20.txt 
   data/okinawa/F30.txt
   data/okinawa/F40.txt
   data/okinawa/F50.txt
@@ -59,7 +75,8 @@
   data/okinawa/M60.txt
   data/okinawa/M70.txt
 
-- 文体識別用サンプルファイル(いずれも全文ではなく抜粋)    
+- 文体識別用サンプルファイル(いずれも全文ではなく抜粋) 
+
   data/writers/ogai_gan.txt               森鴎外『雁』
   data/writers/ogai_niwatori.txt          森鴎外『鶏』
   data/writers/ogai_kanoyoni.txt          森鴎外『かのように』
@@ -70,14 +87,15 @@
   data/writers/soseki_yume.txt            夏目漱石『夢十夜』
 
 - 辞書サンプルデータ
+
   data/motohiro.csv
   data/mecab.bat 
 
 - 説明ファイル
+
   README.md
   README.txt(README.mdと中身は同じ)
   
 - Windows用Shift_Jis(CP932)変換スクリプトおよびデータ
+
   Windows.zip
-  
-  
