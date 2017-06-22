@@ -2,7 +2,7 @@
 
 ##
 - [出版社サイト](http://www.morikita.co.jp/books/book/3169)
-- [Amazon](https://www.amazon.co.jp/dp/4627848420/
+- [Amazon](https://www.amazon.co.jp/dp/4627848420/)
 
 ## 正誤表(予定)
 
