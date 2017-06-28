@@ -6,6 +6,7 @@
 
 ## 正誤表(予定)
 
+https://github.com/IshidaMotohiro/TextMining/wiki/%E6%AD%A3%E8%AA%A4%E8%A1%A8
 
 ## ファイルの説明
 
