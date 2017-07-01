@@ -8,7 +8,16 @@
 
 https://github.com/IshidaMotohiro/TextMining/wiki/%E6%AD%A3%E8%AA%A4%E8%A1%A8
 
+
+## Macでのインストール補足
+
+本書の説明通りに RMeCab をインストールしてRが落ちる場合は、再度以下のようにしてインストールしてください
+
+ remove.packages("RMeCab")
+ install.packages("RMeCab", repos = "http://rmecab.jp/R", type = "source")
+ 
 ## ファイルの説明
+
 
 
 - 各章に対応したスクリプトファイル
