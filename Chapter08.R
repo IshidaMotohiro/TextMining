@@ -37,7 +37,7 @@ install.packages("wordcloud")
 library(wordcloud)
 ## プロット作成
 wordcloud(miyaz2$TERM, miyaz2$FREQ, min.freq = 3, 
-          scale = c(6,1),family = "JP1")
+          scale = c(6,1),family = "JP1", colors = brewer.pal(8, "Dark2"))
 
 
 ### 8.2 ネットワークグラフ 

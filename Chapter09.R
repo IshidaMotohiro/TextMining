@@ -131,7 +131,7 @@ library(magrittr)
 prime3 <-  prime2 %>% select(-c(TERM:POS2))
 ## 行名に形態素解析の結果を設定 
 rownames(prime3) <- prime2$TERM
-## 行名は短縮化
+## 列名は短縮化
 colnames(prime3)  %<>% str_replace("_general-policy-speech.txt", "")
 colnames(prime3)  %<>% str_replace("(\\d{4})\\d{4}_(\\d{3})", "\\1_\\2")
 
