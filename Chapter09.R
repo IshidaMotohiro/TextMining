@@ -206,7 +206,7 @@ ministersDF %>% ggplot(aes(x = topic, y = props, fill = num)) +       geom_bar(s
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-cairo_pdf(file = "ministersDF.pdf", family = "JP1")
+cairo_pdf(file = "ministersDF.pdf", family = "JP1")# Mac の場合は family = "HiraKakuProN-W3" と変えてください
 x
 dev.off()
 

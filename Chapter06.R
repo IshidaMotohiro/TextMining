@@ -69,7 +69,9 @@ bigram2 <- bigram %>% select (N1, N2, reviews.txt) %>%
 bigram2 %>% class()
 bigram2 %>% head(10)
 
+## p.109
 ## install.packages("igraph")
+## なおMacでは別途　XQuartz (https://www.xquartz.org/) のインストールが必要
 library(igraph)
 
 bigramN <- graph.data.frame(bigram2)

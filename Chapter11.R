@@ -119,7 +119,7 @@ cnttxt2 <- cnttxt %>% filter(Freq >= 31)
 
 library(igraph)
 cntgraph  <- graph.data.frame(cnttxt2)
-RC
+
 
 tkplot(cntgraph, vertex.size = 23, vertex.color = "SkyBlue")
 

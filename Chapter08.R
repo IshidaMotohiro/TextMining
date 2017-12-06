@@ -101,5 +101,5 @@ bigram7 <- edge.betweenness.community(bigram6,
                                       weights = E(bigram6)$weight, 
                                       directed = F)
 
-plot(bigram7, bigram6, vertex.label.family = "JP1")
+plot(bigram7, bigram6, vertex.label.family = "JP1")# Mac の場合は family = "HiraKakuProN-W3" と変えてください
 

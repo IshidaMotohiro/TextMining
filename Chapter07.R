@@ -118,7 +118,7 @@ fviz_ca_biplot(FM4ca)
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-cairo_pdf("FM4ca.pdf", family = "JP1")
+cairo_pdf("FM4ca.pdf", family = "JP1")# Mac の場合は family = "HiraKakuProN-W3" と変えてください
 fviz_ca_biplot(FM4ca)
 dev.off()
 
@@ -155,7 +155,7 @@ fviz_ca_biplot(datCA)
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
-cairo_pdf(file = "datCA.pdf", family = "JP1")
+cairo_pdf(file = "datCA.pdf", family = "JP1") # Mac の場合は family = "HiraKakuProN-W3" と変えてください
 fviz_ca_biplot(datCA)
 dev.off()
 
