@@ -12,7 +12,7 @@ setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
   setwd("/myData/Books/morikita/")
   
 ### 7.1 沖縄観光への意見データ
-okinawa <- read.csv("data/H18koe.csv")
+okinawa <- read.csv("data/H18koe.csv", stringsAsFactors = TRUE)
 ## 行数を確認
 NROW(okinawa)
 ## 列名を確認
