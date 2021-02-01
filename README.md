@@ -8,15 +8,16 @@
 
 https://github.com/IshidaMotohiro/TextMining/wiki/%E6%AD%A3%E8%AA%A4%E8%A1%A8
 
+## インストールについて
 
-## Macでのインストール補足
-
-本書の説明通りに RMeCab をインストールしてRが落ちる場合は、再度以下のようにしてインストールしてください
-
+パソコンに開発環境があれば GitHub からもインストールもできます。本書の説明通りに RMeCab をインストールしてRが落ちる場合には、この方法を試してください。開発環境としては Windowsの場合 Rtools40 https://cran.ism.ac.jp/bin/windows/Rtools/ を、 Mac であればコマンドラインツール https://support.apple.com/ja-jp/guide/deployment-reference-macos/apdf028a757b/web をインストールした上で試してください。MeCab https://taku910.github.io/mecab/ もあらかじめインストールしておいてください。
 
 ```
- remove.packages("RMeCab")
- install.packages("RMeCab", repos = "http://rmecab.jp/R", type = "source")
+# Windows Mac Linux の場合
+install.packages("remotes")
+remotes::install_github("IshidaMotohiro/RMeCab")
+# Mac Linux の場合は以下でも良い
+# install.packages("RMeCab", repos = "http://rmecab.jp/R", type = "source")
 ```
 
 ## ファイルの説明
