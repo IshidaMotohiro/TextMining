@@ -4,6 +4,8 @@
 - [出版社サイト](http://www.morikita.co.jp/books/book/3169)
 - [Amazon](https://www.amazon.co.jp/dp/4627848420/)
 
+関連ファイルは右上の[Code] ボタンを押して[Download ZIP]をクリックしてください。
+
 ## 正誤表(予定)
 
 https://github.com/IshidaMotohiro/TextMining/wiki/%E6%AD%A3%E8%AA%A4%E8%A1%A8
