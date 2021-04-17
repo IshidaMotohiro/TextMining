@@ -47,6 +47,8 @@ AgeL %>% map_chr(
 
 AgeL <- AgeL[-1]
 
+dir.create("okinawa")
+setwd("okinawa")
 ### Windows
 setwd("C:/Users/ishida/okinawa")
 ### Mac
@@ -71,6 +73,7 @@ AgeL %>% map(
 
 library(RMeCab)
 
+setwd("../")
 ### Windows
 setwd("C:/Users/ishida")
 ### Mac
@@ -106,6 +109,8 @@ dim(FM4)
 ## 列名と行名を確認
 colnames(FM4) 
 rownames(FM4)
+
+View(FM4)
 
 ### 7.3 意見データの対応分析
 #install.packages(c("FactoMineR", "factoextra"))
