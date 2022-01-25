@@ -9,7 +9,7 @@ setwd("C:/Users/ishida/TextMining")# など
 setwd("/Users/ishida/Download/TextMining")# など
 ### Linux
 setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
-  setwd("/myData/Books/morikita/")
+setwd("~/myData/Books/morikita/")
   
 ### 7.1 沖縄観光への意見データ
 okinawa <- read.csv("data/H18koe.csv", stringsAsFactors = TRUE)
@@ -113,12 +113,15 @@ rownames(FM4)
 View(FM4)
 
 ### 7.3 意見データの対応分析
-#install.packages(c("FactoMineR", "factoextra"))
+# install.packages(c("FactoMineR", "factoextra"))
 library(FactoMineR)
 FM4ca <- CA(FM4, graph = FALSE)
 ## ggplot2 ベースのバイプロットを描く
 library(factoextra)
-fviz_ca_biplot(FM4ca)
+fviz_ca_biplot(FM4ca, labelsize = 6, pointsize = 4)
+# +theme(text = element_text(size = 12),
+#        axis.title = element_text(size = 12),
+#        axis.text = element_text(size = 12))
 
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
 # 3行続けて実行することで画像ファイルが作成されます

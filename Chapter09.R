@@ -11,7 +11,7 @@ setwd("/Users/ishida/Download/TextMining")# など
 setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
 
 
-### l9.1 解析の準備
+### 9.1 解析の準備
 library(RMeCab)
 ## Windowsの場合は以下の "data/prime/utf" を "data/prime/sjis" にするなど
 ## 自身の作業環境にあわせて適宜変更
@@ -26,14 +26,13 @@ library(dplyr)
 library(magrittr)
 ## 列名を短縮化する
 colnames(prime)  %<>% str_replace("_general-policy-speech.txt", "")
-colnames(prime)  %<>% str_replace("(\\d{4})\\d{4}_(\\d{3})", "\\1_\\2")
+colnames(prime)  %<>% str_replace("(\\d{4})\\d{4}_(\\d{1,3})", "\\1_\\2")
 
 
 ### 9.3 所信表明演説のクラスター分析
 hc <- prime %>% t %>% dist %>% hclust("ward.D2")
 
-# 
-install.packages("ggdendro")
+# install.packages("ggdendro")
 
 library(ggdendro)
 ggdendrogram(hc, rotate= TRUE)
@@ -73,7 +72,7 @@ TD_svd$v
 t(TD_svd$u[, 1:3]) %*% TD
 
 ### 9.6 潜在的意味インデキシングによる分類
-install.packages("rgl")
+# install.packages("rgl")
 
 prime.svd <- svd(prime)
 prime2 <- t(prime.svd$u[, 1:3]) %*% prime
@@ -110,7 +109,7 @@ vignette("rgl")
 
 
 ### 9.7 トピックモデル
-install.packages(c("topicmodels","lda"))
+# install.packages(c("topicmodels","lda"))
 
 library(RMeCab)
 
@@ -133,15 +132,16 @@ prime3 <-  prime2 %>% select(-c(TERM:POS2))
 rownames(prime3) <- prime2$TERM
 ## 列名は短縮化
 colnames(prime3)  %<>% str_replace("_general-policy-speech.txt", "")
-colnames(prime3)  %<>% str_replace("(\\d{4})\\d{4}_(\\d{3})", "\\1_\\2")
+colnames(prime3)  %<>% str_replace("(\\d{4})\\d{4}_(\\d{1,3})", "\\1_\\2")
 
+## ターム文書行列を作成
 library(tm)
 prime3a <- prime3 %>% t() %>%  as.DocumentTermMatrix(weighting = weightTf)
 
 ### 9.7.1 トピックモデルによるモデル推定
 library(topicmodels)
 ## トピックの数を指定
-K <- 5
+K <- 5１
 res1 <- prime3a %>% LDA(K)
 
 terms(res1)
@@ -192,6 +192,15 @@ ministersDF <- as.data.frame(ministers) %>%
                    mutate(num = paste0("No", c(64, 74, 77, 80)))
 ministersDF
 
+## 行列をデータフレームに変換し列名を設定
+ministersDF <- as.data.frame(ministers) %>% 
+  set_names(paste0("topic", 1:5)) %>% 
+  ## num という列を追加
+  mutate(num = c("64:小泉", "74:鳩山", "77:野田", "80:安倍"))
+
+ministersDF
+
+
 # install.packages("tidyr")
 
 library(tidyr)
@@ -207,6 +216,6 @@ ministersDF %>% ggplot(aes(x = topic, y = props, fill = num)) +       geom_bar(s
 # 3行続けて実行することで画像ファイルが作成されます
 # RStudio 右のFilesタブで画像ファイルをクリックすることで、適切なビューワー が立ちあがります
 cairo_pdf(file = "ministersDF.pdf", family = "JP1")# Mac の場合は family = "HiraKakuProN-W3" と変えてください
-x
+
 dev.off()
 

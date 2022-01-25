@@ -8,7 +8,7 @@ setwd("C:/Users/ishida/TextMining")# など
 ### Mac
 setwd("/Users/ishida/Download/TextMining")# など
 ### Linux
-setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
+setwd("/home/ishida/Download/TextMining")# など
 
 
 library(RMeCab)
@@ -18,6 +18,8 @@ res <- docNgram("data/writers", type = 0)
 
 ncol(res) ; nrow(res)
 
+colnames(res) <- c("鴎外：雁", "鴎外：かのように", "鴎外：鶏", "鴎外：ヰタ", 
+                   "漱石：永日", "漱石：硝子", "漱石：思い出す", "漱石：夢")
 
 res %>% tail()
 
@@ -66,18 +68,22 @@ options(digits = 3)
 
 summary(res2_pc)
 
-install.packages("ggfortify")
+# install.packages("ggfortify")
 library(ggfortify)
 
 library(stringr)
+rownames(res2_pc$scores) 
 
+# 変数名を日本語にした場合は以下（１）はスキップして、（２）を実行
+# （１）変数名がアルファベット表記の場合
 rownames(res2_pc$scores) <- res2_pc$scores %>% 
                               rownames() %>% 
                                 str_extract("[a-z]+") %>% 
                                   paste0(1:8)
 
+# （２） バイプロットの作成
 autoplot(res2_pc, label =TRUE, label.size = 8, loadings = TRUE, 
-          loadings.label = TRUE,  loadings.label.size  = 12, 
+          loadings.label = TRUE,  loadings.label.size  = 6, 
           loadings.label.family = "JP1")
 
 # 上記の実行結果の画像で文字化けが生じている場合、以下のようにPDF画像として作成して確認してみてください
