@@ -27,9 +27,9 @@ texts
 
 remDr$close()
 
-writeLines(texts, "data/reviews_rselenium.txt")
+writeLines(texts, "data/reviews.txt")
 
 library(RMeCab)
-revi <- docDF("data/reviews_rselenium.txt", type = 1, pos = c("名詞","形容詞", "動詞"))
+revi <- docDF("data/reviews.txt", type = 1, pos = c("名詞","形容詞", "動詞"))
 revi
 # revi %>% NROW()
