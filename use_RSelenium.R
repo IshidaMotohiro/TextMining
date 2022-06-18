@@ -18,8 +18,6 @@ remDr$open()
 
 remDr$navigate(url = "https://bookmeter.com/books/5550353")
 
-remDr$navigate("https://books.toscrape.com/catalogue/category/books/science-fiction_16")
-
 # reviews <- remDr$findElements(using = "css", "html body.layouts.application section.books.show div.bm-wrapper div.bm-wrapper__main section.layouts.components.content-with-header div.content-with-header__content section")
 reviews <- remDr$findElements(using = "class", "frame__content__text")
 
