@@ -1,12 +1,14 @@
 install.packages("RSelenium")
 
 # use installed selenium-server
-## check your directory
+## 以下は筆者の環境でseleniumドライバを起動する例です
 # cd .local/share/binman_seleniumserver/generic/4.0.0-alpha-2/
 # java -jar selenium-server-standalone-4.0.0-alpha-2.jar 
 
+## 起動後Rで以下を操作
 library(RSelenium)
 # Start Selenium Session
+## 以下を実行すると、バックグランドで自動的にドライバがインストールされる？
 remDr <- remoteDriver(
   remoteServerAddr = "localhost",
   port = 4444L,
