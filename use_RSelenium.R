@@ -26,3 +26,10 @@ texts <-  unlist(lapply(reviews, function(x){x$getElementText()}))
 texts
 
 remDr$close()
+
+writeLines(texts, "data/reviews_rselenium.txt")
+
+library(RMeCab)
+revi <- docDF("data/reviews_rselenium.txt", type = 1, pos = c("名詞","形容詞", "動詞"))
+revi
+# revi %>% NROW()
