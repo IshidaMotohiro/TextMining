@@ -164,8 +164,12 @@ merosu <- Ngram("data/merosu.txt", type = 2, N = 2)
 
 merosu %>% head()
 
-
+library(tidyverse)
+library(RMeCab)
 ### 5.6.4 汎用的なdocDF() 
+merosu <- docDF("data/merosu.txt", type = 0, N = 2, nDF = 1)
+merosu %>% View()
+merosu %>% tail()
 merosu <- docDF("data/merosu.txt", type = 1, pos = c("名詞","形容詞"), N = 2, nDF = 1)
 merosu %>% head()
 
