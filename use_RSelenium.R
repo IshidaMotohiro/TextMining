@@ -1,3 +1,18 @@
+## 動的サイトをスクレイピングする方法として
+## selenium を利用した例を紹介します
+## java が動作する環境整備と、selenium のインストールが必要です
+## https://www.selenium.dev/ja/
+
+## java (jre) をダウンロードします
+##  https://www.java.com/ko/download/manual.jsp
+
+## Selenium Standalone Server をダウンロードします
+##  https://www.selenium.dev/downloads/
+
+## ブラウザ用のドライバをダウンロードします
+## https://www.selenium.dev/ja/documentation/webdriver/getting_started/install_drivers/
+
+## RSelenium をインストールします
 install.packages("RSelenium")
 
 # use installed selenium-server
@@ -8,7 +23,7 @@ install.packages("RSelenium")
 ## 起動後Rで以下を操作
 library(RSelenium)
 # Start Selenium Session
-## 以下を実行すると、バックグランドで自動的にseleniumがインストールされる？
+## 以下を実行すると、バックグランドで自動的に関連ドライバがインストールされる？
 remDr <- remoteDriver(
   remoteServerAddr = "localhost",
   port = 4444L,
