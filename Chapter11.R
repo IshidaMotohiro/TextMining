@@ -26,9 +26,10 @@ setup_twitter_oauth(consumerKey, consumerSecret, accessToken, accessSecret)
 
 ### 11.4 twitteR の利用
 ## Windowsの場合文字コードを変換して投稿する
+### Windows版R-4.1 まで
 tweet(iconv("2017 1 14 R から呟いてみる", 
             from = "UTF-8", to = "CP932"))
-## Mac ないし Linux の場合
+## Mac ないし Linux の場合、あるいはWindows版Rバージョン 4.2 以降
 ## tweet("2017 1 14 R から呟いてみる")
 
 ### 特定のアカウントのツィートを取得
