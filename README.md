@@ -26,7 +26,7 @@ Windows版Rをご利用の場合、Rのバージョンによって、それぞ�
 
 ikegami氏の Github サイト <https://github.com/ikegami-yukino/mecab/releases> から私家版MeCabインストーラーをダウンロードし、文字コードはUTF-8を指定してインストールしてください。
 
-ここに登録されているファイルはすべて文字コードが UTF-8 になっていますが、このファイルをそのまま使ってください。Shift-JISに変換する必要はありません。
+このサイト（https://github.com/IshidaMotohiro/textMining）に登録されているファイルはすべて文字コードが UTF-8 になっていますが、このファイルをそのまま使ってください。Shift-JISに変換する必要はありません。
 
 
 ## macOS での MeCab インストールについて
@@ -60,7 +60,7 @@ https://youtu.be/0ePI8a9kNUI
 
 
 
-## インストールについて
+## RMeCabインストールについて
 
 パソコンに開発環境があれば GitHub からもインストールもできます。本書の説明通りに RMeCab をインストールしてRが落ちる場合には、この方法を試してください。開発環境としては Windowsの場合 R-4.2 以降をお使いの場合は Rtools42 https://cran.ism.ac.jp/bin/windows/Rtools/ を、 Mac であればコマンドラインツール https://support.apple.com/ja-jp/guide/deployment-reference-macos/apdf028a757b/web をインストールした上で試してください。MeCab については上記の手順であらかじめインストールしておいてください。
 
