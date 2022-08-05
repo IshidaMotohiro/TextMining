@@ -141,7 +141,7 @@ prime3a <- prime3 %>% t() %>%  as.DocumentTermMatrix(weighting = weightTf)
 ### 9.7.1 トピックモデルによるモデル推定
 library(topicmodels)
 ## トピックの数を指定
-K <- 5１
+K <- 5
 res1 <- prime3a %>% LDA(K)
 
 terms(res1)
