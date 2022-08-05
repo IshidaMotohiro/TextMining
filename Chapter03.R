@@ -48,7 +48,7 @@ df1 <- data.frame(クラス = c("B", "A", "A", "B", "C", "A"),
 
 ### 3.7 CSV ファイルの読み込み
 dat <- read.csv("data/classes.csv")
-##  一般に Mac ないし Linux でWindowsで作成された csv ファイルを読み込むには以下を実行する(ただし本書サポートサイトの classes.csv は UTF-8 に変換されているので不要)
+##  一般に Mac ないし Linux で、Windowsで作成された csv ファイルを読み込むには以下を実行する(ただし本書サポートサイトの classes.csv は UTF-8 に変換されているので不要)
 ## dat <- read.csv("data/classes.csv", fileEncoding= "CP932")
                 
 head(dat)

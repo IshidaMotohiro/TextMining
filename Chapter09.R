@@ -13,7 +13,7 @@ setwd("/home/ishida/Dropbox/R/Morikita/Version2/")# など
 
 ### 9.1 解析の準備
 library(RMeCab)
-## Windowsの場合は以下の "data/prime/utf" を "data/prime/sjis" にするなど
+## Windows 版 R バージョン 4.1 以前では以下の "data/prime/utf" を "data/prime/sjis" にするなど
 ## 自身の作業環境にあわせて適宜変更
 prime <- docMatrix2("data/prime/utf8", pos = c("名詞","形容詞","動詞"), 
                    weight = "tf*idf*norm")

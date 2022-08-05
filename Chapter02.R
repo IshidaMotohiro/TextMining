@@ -31,8 +31,10 @@ sudo ldconfig ## Linux ではこれが必要
 
 ### 2.5 MeCab の実行 c ドライブの work フォルダに test.txt ファイル(この近くに郵便局ありますか)が存在するとして 
 # 以下はR/RStudioではなく、ターミナルで実行
-C:\Program Files (x86)\MeCab\bin\mecab.exe c:\work\test.txt > c:\work\res.txt
-### 32 ビット版Windowsでは以下のように実行
+## Windows R-4.1 の場合
+## C:\Program Files (x86)\MeCab\bin\mecab.exe c:\work\test.txt > c:\work\res.txt
+
+## Windows R-4.2 の場合
 C:\Program Files\MeCab\bin\mecab.exe c:\work\test.txt > c:\work\res.txt
 
 # Mac ではターミナルを起動して以下のように実行
@@ -48,8 +50,9 @@ install.packages("RMeCab", repos = "http://rmecab.jp/R")
 
 ### 2.7 MeCab の辞書整備
 #### 以下はR/RStudioではなく、ターミナルで実行
-C:\Program Files (x86)\MeCab\bin>mecab-dict-index.exe -d "c:\Program Files (x86)\MeCab\dic\ipadic" -u c:\data\motohiro.dic -f shift-jis -t shift-jis c:\data\motohiro.csv
-### 32ビットWindowsの場合
+## Windows R-4.1 の場合
+##  C:\Program Files (x86)\MeCab\bin>mecab-dict-index.exe -d "c:\Program Files (x86)\MeCab\dic\ipadic" -u c:\data\motohiro.dic -f shift-jis -t shift-jis c:\data\motohiro.csv
+###  Windows R-4.12 の場合
 C:\Program Files\MeCab\bin>mecab-dict-index.exe -d "c:\Program Files\MeCab\dic\ipadic" -u c:\data\motohiro.dic -f shift-jis -t shift-jis c:\data\motohiro.csv
 
 ### Mac/Linux ではターミナルを起動して実行

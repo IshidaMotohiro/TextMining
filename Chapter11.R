@@ -27,10 +27,9 @@ setup_twitter_oauth(consumerKey, consumerSecret, accessToken, accessSecret)
 ### 11.4 twitteR の利用
 ## Windowsの場合文字コードを変換して投稿する
 ### Windows版R-4.1 まで
-tweet(iconv("2017 1 14 R から呟いてみる", 
-            from = "UTF-8", to = "CP932"))
+## tweet(iconv("2017 1 14 R から呟いてみる", from = "UTF-8", to = "CP932"))
 ## Mac ないし Linux の場合、あるいはWindows版Rバージョン 4.2 以降
-## tweet("2017 1 14 R から呟いてみる")
+tweet("2017 1 14 R から呟いてみる")
 
 ### 特定のアカウントのツィートを取得
 tweets <- userTimeline("mextjapan", 200)
@@ -50,9 +49,8 @@ texts %<>% str_replace_all("\\p{ASCII}", "")
 texts <- texts[!is.na(texts)]
 
 
-# Windowsの場合文字コードを変更する
+# Windows 版R 4.1以前では文字コードを変更する
 # texts <- iconv(texts , from = "UTF-8", to = "CP932")
-   # Macの場合、上の１行は実行してもしなくとも問題ない
 
 
 # 取得したツィーツをファイルに保存
@@ -104,9 +102,9 @@ texts <- cntDF$text
 # 記号などを削除
 
 texts %<>% str_replace_all("\\p{ASCII}", "")
-# Windowsの場合はここで文字列を変換する
+# Windows 版 R 4.1 以前ではここで文字列を変換する
 # texts <- iconv(texts , from = "UTF-8", to = "CP932")
-  # Mac や Linux で実行してはいけない
+
 
 # 取得したテキストをファイルに保存
 text2 <- paste(texts, collapse = "")
