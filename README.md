@@ -1,6 +1,6 @@
 # 『Rによるテキストマイニング入門(第2版)』 スクリプトおよびデータ
 
-##
+
 - [出版社サイト](http://www.morikita.co.jp/books/book/3169)
 - [Amazon](https://www.amazon.co.jp/dp/4627848420/)
 
@@ -9,6 +9,10 @@
 ## 正誤表(予定)
 
 https://github.com/IshidaMotohiro/TextMining/wiki/%E6%AD%A3%E8%AA%A4%E8%A1%A8
+
+
+Windows 版 R バージョン 4.2 から、デフォルトの文字コードが UTF-8 となり、またインストールされるのが 64 Bit のみとなりました。
+本書の次回増刷で対応予定ですが、基本、以下が必要となります。
 
 
 ## Windows版MeCab のインストールについて
@@ -60,7 +64,7 @@ https://youtu.be/0ePI8a9kNUI
 
 
 
-## RMeCabインストールについて
+## RMeCab インストールについて
 
 パソコンに開発環境があれば GitHub からもインストールもできます。本書の説明通りに RMeCab をインストールしてRが落ちる場合には、この方法を試してください。開発環境としては Windowsの場合 R-4.2 以降をお使いの場合は Rtools42 https://cran.ism.ac.jp/bin/windows/Rtools/ を、 Mac であればコマンドラインツール https://support.apple.com/ja-jp/guide/deployment-reference-macos/apdf028a757b/web をインストールした上で試してください。MeCab については上記の手順であらかじめインストールしておいてください。
 
