@@ -30,7 +30,7 @@ Windows版Rをご利用の場合、Rのバージョンによって、それぞ�
 
 ikegami氏の Github サイト <https://github.com/ikegami-yukino/mecab/releases> から私家版MeCabインストーラーをダウンロードし、文字コードはUTF-8を指定してインストールしてください。
 
-このサイト（https://github.com/IshidaMotohiro/textMining）に登録されているファイルはすべて文字コードが UTF-8 になっていますが、このファイルをそのまま使ってください。Shift-JISに変換する必要はありません。
+このサイト <https://github.com/IshidaMotohiro/textMining> に登録されているファイルはすべて文字コードが UTF-8 になっていますが、このファイルをそのまま使ってください。Shift-JISに変換する必要はありません。
 
 
 ## macOS での MeCab インストールについて
