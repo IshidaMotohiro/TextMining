@@ -61,7 +61,7 @@ xcode-select --install
 
 https://youtu.be/0ePI8a9kNUI
 
-
+[![MeCab_Install](http://img.youtube.com/vi/0ePI8a9kNUI/0.jpg)](https://www.youtube.com/watch?v=0ePI8a9kNUI)
 
 
 ## RMeCab インストールについて
