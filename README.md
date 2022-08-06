@@ -23,7 +23,7 @@ Windows版Rをご利用の場合、Rのバージョンによって、それぞ�
 
 工藤拓氏の公式サイト <https://taku910.github.io/mecab/> からインストーラーをダウンロードして、文字コードは標準のShift-JISのままインストールしてください。
 
-また、このGithubレポジトリ(https://github.com/IshidaMotohiro/TextMining)に登録されているファイルはすべて文字コードが UTF-8 になっています。このため Windows 版 RStudio で開くと、日本語部分が文字化けします。これを修正するには、RStudio のメニューから、File -> Reopen with Encoding -> UTF-8 として開き直します。画面上で文字化けが修正されたことが確認できたら、再び RStudio のメニューから Save with Encoding を指定し CP932 で保存し直してください。
+また、このGithubレポジトリ <https://github.com/IshidaMotohiro/TextMining> に登録されているファイルはすべて文字コードが UTF-8 になっています。このため Windows 版 RStudio で開くと、日本語部分が文字化けします。これを修正するには、RStudio のメニューから、File -> Reopen with Encoding -> UTF-8 として開き直します。画面上で文字化けが修正されたことが確認できたら、再び RStudio のメニューから Save with Encoding を指定し CP932 で保存し直してください。
 
 
 ### Windows版R-4.2 以降
