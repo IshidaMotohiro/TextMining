@@ -143,6 +143,9 @@ library(topicmodels)
 ## トピックの数を指定
 K <- 5
 res1 <- prime3a %>% LDA(K)
+## ちなみに乱数を指定することで同じ出力を出したい場合は R ほ set.seed()ではなく以下のようにします
+res1 <- prime3a %>% LDA(K, control = list(initialize = "seeded",  
+                                          seed=123))
 
 terms(res1)
 
